@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Md.Zakaria Hossain</title>
+  <title>Md. Zakaria Hossain</title>
   <link rel="icon" type="image/png" href="Img/zakariya.jpg">
+
   <style>
     * {
       margin: 0;
@@ -18,40 +19,50 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      padding: 20px;
       min-height: 100vh;
       color: #222;
     }
 
     .card {
-      background: rgba(255,255,255,0.9);
-      backdrop-filter: blur(10px);
-      border-radius: 20px;
-      padding: 40px 30px;
-      width: 350px;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px);
+      border-radius: 22px;
+      padding: 35px 25px;
+      width: 100%;
+      max-width: 380px;
       text-align: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-      border: 1px solid rgba(0,0,0,0.08);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      border: 1px solid rgba(0,0,0,0.05);
+      transition: 0.3s ease;
+      animation: fadeIn 0.6s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
     }
 
     .profile-img {
-      width: 120px;
-      height: 120px;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
-      border: 3px solid #ffc107; /* Gold border */
-      margin-bottom: 20px;
+      border: 3px solid #ffc107;
+      margin-bottom: 18px;
       object-fit: cover;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
 
     h2 {
       color: #000;
-      font-size: 1.7em;
+      font-size: 1.8em;
       margin-bottom: 5px;
     }
 
     p.title {
       color: #555;
-      font-size: 1em;
-      margin-bottom: 20px;
+      font-size: 1.05em;
+      margin-bottom: 22px;
     }
 
     .links-grid {
@@ -69,21 +80,18 @@
       background: linear-gradient(45deg, #ff9800, #ffc107);
       color: #000;
       padding: 12px;
-      border-radius: 10px;
+      border-radius: 12px;
       text-decoration: none;
       font-weight: 600;
       transition: 0.3s ease;
+      font-size: 1rem;
     }
 
     .links-grid a:hover,
     .full-width a:hover {
       background: linear-gradient(45deg, #ffc107, #ff9800);
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(255, 193, 7, 0.5);
-    }
-
-    .full-width {
-      margin-top: 10px;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(255, 193, 7, 0.5);
     }
 
     .full-width a {
@@ -95,45 +103,62 @@
     }
 
     .qr-code img {
-      width: 120px;
-      border-radius: 10px;
+      width: 140px;
+      border-radius: 12px;
       border: 1px solid rgba(0,0,0,0.1);
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
     }
 
     .qr-code img:hover {
-      transform: scale(1.1);
+      transform: scale(1.12);
     }
 
     footer {
-      margin-top: 20px;
+      margin-top: 22px;
       font-size: 0.85em;
       color: #555;
     }
+
+    /* 📱 Mobile Responsive Fixes */
+    @media (max-width: 480px) {
+      .card {
+        padding: 25px 18px;
+      }
+
+      h2 {
+        font-size: 1.6em;
+      }
+
+      .links-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .qr-code img {
+        width: 130px;
+      }
+    }
   </style>
 </head>
+
 <body>
 
   <div class="card">
     <img src="Img/zakariya.jpg" alt="zakariya" class="profile-img" />
-    <h2>Md.Zakaria Hossain</h2>
+    <h2>Md. Zakaria Hossain</h2>
     <p class="title">Assistant Manager (SAP)</p>
 
-    <!-- Buttons -->
     <div class="links-grid">
       <a href="tel:+8801745-599409">📞 Call</a>
       <a href="mailto:Zakaria.hossain@hameemgroup.com">✉️ Email</a>
       <a href="https://wa.me/+8801745-599409">💬 WhatsApp</a>
-      <a href="">💼 Profile</a>
+      <a href="#">💼 Profile</a>
     </div>
 
-    <!-- Full-width -->
     <div class="full-width">
       <a href="https://hameemdenim.com/">🌐 Company Website</a>
     </div>
 
-    <!-- QR Code -->
     <div class="qr-code">
       <a href="https://www.google.com/" target="_blank">
         <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://www.google.com/" alt="QR Code" />
