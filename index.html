@@ -18,53 +18,48 @@
       background: #f4f6f9;
       display: flex;
       justify-content: center;
-      align-items: flex-start;
-      padding: 0;
+      align-items: center;
       min-height: 100vh;
-      color: #222;
     }
 
     .card {
       background: #fff;
       width: 100%;
-      max-width: 420px;   /* desktop/tablet width */
-      border-radius: 10px;
-      padding: 30px 22px;
-      min-height: 100vh;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      max-width: 420px;
+      border-radius: 12px;
+      padding: 28px 22px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
     }
 
-    /* Profile Image */
     .profile-img {
-      width: 120px;
-      height: 120px;
+      width: 125px;
+      height: 125px;
       border-radius: 50%;
       border: 3px solid #ffc107;
       object-fit: cover;
       display: block;
-      margin: 0 auto 15px;
+      margin: 0 auto 18px;
     }
 
     h2 {
       text-align: center;
-      font-size: 1.8em;
-      margin-bottom: 5px;
+      font-size: 1.85em;
+      margin-bottom: 6px;
       font-weight: 700;
     }
 
     p.title {
       text-align: center;
       color: #666;
-      margin-bottom: 25px;
-      font-size: 1em;
+      margin-bottom: 28px;
+      font-size: 1.05em;
     }
 
-    /* Buttons Layout */
     .links-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-bottom: 18px;
+      gap: 14px;
+      margin-bottom: 20px;
     }
 
     .links-grid a,
@@ -72,10 +67,10 @@
       background: #ffb300;
       color: #000;
       text-decoration: none;
-      padding: 12px;
+      padding: 14px 10px;
       text-align: center;
       border-radius: 10px;
-      font-size: 1rem;
+      font-size: 1.05rem;
       font-weight: 600;
       transition: 0.3s;
     }
@@ -85,18 +80,16 @@
       background: #ff9800;
     }
 
-    /* Single wide button */
     .full-width a {
-      width: 100%;
       display: block;
+      width: 100%;
+      margin-bottom: 20px;
     }
 
-    /* QR Code */
     .qr-code img {
-      width: 150px;
+      width: 170px;
       display: block;
-      margin: 0 auto;
-      margin-top: 10px;
+      margin: 10px auto 0;
     }
 
     footer {
@@ -106,27 +99,24 @@
       color: #555;
     }
 
-    /* 📱 MOBILE VIEW - full screen card */
+    /* 📱 MOBILE FULL-SCREEN FIX */
     @media (max-width: 480px) {
       body {
-        padding: 0;
-        background: #fff; /* remove outer background on phone */
+        background: #fff;
+        align-items: flex-start;
       }
 
       .card {
         width: 100%;
-        border-radius: 0;      /* Full screen card */
         min-height: 100vh;
-        box-shadow: none;      /* remove shadow on mobile */
-        padding-top: 40px;
-      }
-
-      .links-grid {
-        grid-template-columns: 1fr 1fr;
+        max-width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        padding-top: 45px;
       }
 
       .qr-code img {
-        width: 140px;
+        width: 150px;
       }
     }
   </style>
@@ -140,7 +130,6 @@
     <h2>Md. Zakaria Hossain</h2>
     <p class="title">Assistant Manager (SAP)</p>
 
-    <!-- Buttons -->
     <div class="links-grid">
       <a href="tel:+8801745-599409">📞 Call</a>
       <a href="mailto:Zakaria.hossain@hameemgroup.com">✉️ Email</a>
@@ -148,15 +137,14 @@
       <a href="#">💼 Profile</a>
     </div>
 
-    <!-- Full button -->
     <div class="full-width">
       <a href="https://hameemdenim.com/">🌐 Company Website</a>
     </div>
 
-    <!-- QR Code -->
     <div class="qr-code">
       <a href="https://www.google.com/" target="_blank">
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://www.google.com/" alt="QR Code" />
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://www.google.com/" 
+        alt="QR Code" />
       </a>
     </div>
 
