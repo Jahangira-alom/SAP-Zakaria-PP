@@ -20,6 +20,8 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
+      margin: 0;
+      padding: 0;
     }
 
     .card {
@@ -73,6 +75,7 @@
       font-size: 1.05rem;
       font-weight: 600;
       transition: 0.3s;
+      display: block;
     }
 
     .links-grid a:hover,
@@ -81,7 +84,6 @@
     }
 
     .full-width a {
-      display: block;
       width: 100%;
       margin-bottom: 20px;
     }
@@ -102,44 +104,24 @@
     /* 📱 MOBILE FULL-SCREEN FIX */
     @media (max-width: 480px) {
       body {
-        background: #fff;
-        align-items: flex-start;
+        background: #fff !important;
+        display: block;
+        min-height: 100vh;
       }
 
       .card {
-        width: 100%;
-        min-height: 100vh;
-        max-width: 100%;
-        border-radius: 0;
-        box-shadow: none;
-        /* padding-top: 45px; */
+        width: 100% !important;
+        height: 100vh !important;   /* FULL SCREEN */
+        max-width: 100% !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        padding-top: 45px !important;
       }
 
       .qr-code img {
         width: 150px;
       }
     }
- /* 📱 MOBILE FULL-SCREEN FIX */
-    @media (max-width: 375px) {
-      body {
-        background: #fff;
-        align-items: flex-start;
-      }
-
-      .card {
-        width: 100%;
-        min-height: 100vh;
-        max-width: 100%;
-        border-radius: 0;
-        box-shadow: none;
-        /* padding-top: 45px; */
-      }
-
-      .qr-code img {
-        width: 150px;
-      }
-    }
-
   </style>
 </head>
 
@@ -164,7 +146,7 @@
 
     <div class="qr-code">
       <a href="https://www.google.com/" target="_blank">
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://www.google.com/" 
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://www.google.com/"
         alt="QR Code" />
       </a>
     </div>
