@@ -112,13 +112,34 @@
         max-width: 100%;
         border-radius: 0;
         box-shadow: none;
-        padding-top: 45px;
+        /* padding-top: 45px; */
       }
 
       .qr-code img {
         width: 150px;
       }
     }
+ /* 📱 MOBILE FULL-SCREEN FIX */
+    @media (max-width: 375px) {
+      body {
+        background: #fff;
+        align-items: flex-start;
+      }
+
+      .card {
+        width: 100%;
+        min-height: 100vh;
+        max-width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        /* padding-top: 45px; */
+      }
+
+      .qr-code img {
+        width: 150px;
+      }
+    }
+
   </style>
 </head>
 
